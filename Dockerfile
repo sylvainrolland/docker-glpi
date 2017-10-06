@@ -31,4 +31,4 @@ RUN /opt/glpi-start.sh
 #Exposition des ports
 EXPOSE 80 443
 
-CMD ["apache2-foreground"]
+CMD ["/usr/sbin/apache2ctl -D FOREGROUND"]
