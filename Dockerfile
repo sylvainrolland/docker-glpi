@@ -25,8 +25,8 @@ wget
 
 #Copie et execution du script pour l'installation et l'initialisation de GLPI
 COPY glpi-start.sh /opt/
-RUN chmod +x /opt/glpi-start.sh & \
-    /opt/glpi-start.sh
+RUN chmod +x /opt/glpi-start.sh
+RUN /opt/glpi-start.sh
 
 #Exposition des ports
 EXPOSE 80 443
