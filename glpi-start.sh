@@ -31,7 +31,4 @@ fi
 echo -e "<VirtualHost *:80>\n\tDocumentRoot /var/www/html/glpi\n\n\t<Directory /var/www/html/glpi>\n\t\tAllowOverride All\n\t\tOrder Allow,Deny\n\t\tAllow from all\n\t</Directory>\n\n\tErrorLog /var/log/apache2/error-glpi.log\n\tLogLevel warn\n\tCustomLog /var/log/apache2/access-glpi.log combined\n</VirtualHost>" > /etc/apache2/sites-available/000-default.conf
 
 #Activation du module rewrite d'apache
-a2enmod rewrite && service apache2 restart && service apache2 stop
-
-#Lancement du service apache au premier plan
-/usr/sbin/apache2ctl -D FOREGROUND
+a2enmod rewrite
